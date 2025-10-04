@@ -373,7 +373,7 @@ atexit.register(cleanup_mongodb)
 # SIMPLE MODEL SWITCHING - Just change the model name here!
 
 # CHANGE THIS TO USE DIFFERENT MODELS
-OLLAMA_MODEL = "deepseek-v3.1:671b"  # <-- Just change this model name
+OLLAMA_MODEL = "qwen3-coder:480b"  # <-- Just change this model name
 # Available models:
 # - "gpt-oss:latest"     (14GB) - Latest GPT-OSS model
 # - "gpt-oss:20b"        (14GB) - 20B parameter model
