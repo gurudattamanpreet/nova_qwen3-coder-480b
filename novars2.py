@@ -53,8 +53,8 @@ class ChatDatabase:
         self.db = None
 
         try:
-            # HARDCODED MongoDB connection string - No .env needed!
-            connection_string = "mongodb+srv://gurudattamanpreet:gurudattamanpreet@novarsischatbot.pd2nd6d.mongodb.net/?retryWrites=true&w=majority&appName=NovarsisChatbot"
+            
+            connection_string = os.getenv('MONGODB_CONNECTION_STRING')
 
             # Direct connection - no environment variables needed
             if not connection_string:
@@ -384,7 +384,7 @@ OLLAMA_MODEL = "qwen3-coder:480b"  # <-- Just change this model name
 # - Any other Ollama model from https://ollama.com/library
 
 # API Configuration
-OLLAMA_API_KEY = "14bfe5365cc246dc82d933e3af2aa5b6.hz2asqgJi2bO_gpN7Cp1Hcku"  # Your API key (hardcoded)
+OLLAMA_API_KEY = os.getenv('OLLAMA_API_KEY')
 OLLAMA_BASE_URL = "https://ollama.com"  # Using Ollama API endpoint  
 USE_HOSTED_OLLAMA = True  # Always use hosted service - no local ollama needed
 
